@@ -44,6 +44,12 @@ namespace TravelPlannerGraphQL
                 });
             }
 
+            app.UseCors(builder => builder
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+                .AllowAnyOrigin()
+            );
+
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
